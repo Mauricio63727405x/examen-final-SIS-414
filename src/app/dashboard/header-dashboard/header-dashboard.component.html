@@ -1,9 +1,7 @@
 <div id="head">
   <div id="nav" [ngClass]="{'scrolled': isScrolled}">
     <div class="topnav" id="myTopnav">
-      <a href="/home">
-        <img src="" alt="" style="width: 150px; height: 70px; margin-top: 5px; padding-top: 2px;">
-      </a>
+      
       <a href="/home" class="active"><b>Principal</b></a>
       <a href="/movies"><b>Videos</b></a>
       <a href="/dashboard" *ngIf="admin() == 'adrex@gmail.com'"><b>Dashboard</b></a>

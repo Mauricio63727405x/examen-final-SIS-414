@@ -1,15 +1,12 @@
 
 <div class="main">
-    <div style="display: grid; place-items: center;">
+    <div style="display: grid; place-items: center;" class="izq">
         <div id="search">
-            <input [(ngModel)]="search" (ngModelChange)="onSearch()" type="text" placeholder="Buscar Película">
-            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #033154;"></i>
+            <input [(ngModel)]="search" (ngModelChange)="onSearch()" type="text" placeholder="Buscar">
         </div>
     </div>
-    
+    <br>
     <div id="" class="sections">
-        <br>
-        <h2>{{search == '' ?'Últimas películas': ''}}</h2>
         <br>
         <div id="extrenos" class="movie-list">
             <ng-container *ngFor="let movie of movies | keyvalue">
@@ -24,9 +21,9 @@
         </div>
     </div>   
     <div class="pagination">
-        <button (click)="onPageChange(p - 1)" [disabled]="p === 1">Anterior</button>
-        <span>Página {{ p }} de {{ getTotalPages() }}</span>
-        <button (click)="onPageChange(p + 1)" [disabled]="p >= getTotalPages()">Siguiente</button>
+        <button (click)="onPageChange(p - 1)" [disabled]="p === 1"><b>ATRAS</b></button>
+        <span><b>PAGINA {{ p }} DE {{ getTotalPages() }}</b></span>
+        <button (click)="onPageChange(p + 1)" [disabled]="p >= getTotalPages()"><b>SIGUIENTE</b></button>
     </div>
     <br>
 </div>

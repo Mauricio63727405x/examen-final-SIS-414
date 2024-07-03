@@ -1,21 +1,34 @@
+
 #login{
     display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     place-items: center;
     place-content: center;
     color: black;
     height: 95vh;
+    margin: 0;
+    background-image: url(https://png.pngtree.com/background/20230403/original/pngtree-autumn-landscape-illustration-background-picture-image_2270221.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     z-index: -1;
     
-    background-color: rgb(13, 61, 72);
 }
 .container{
-    background: rgb(44, 210, 216);
+   
+   
     width: 500px;
-    overflow: hidden;
+    border: 2px solid  rgba(255, 255, 255,.6);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    height: 500px;
+    display: flex;
+    justify-content: center;
     display: grid;
     place-items: center;
-    border: 1px solid rgb(77, 32, 32);
-    border-radius: 20px;
+    
+   
     padding: 1%;
     box-shadow: 0 0 5px rgb(21, 112, 117);
 }
@@ -154,7 +167,8 @@ input:focus {
 
 @media (max-width: 500px){
     .container{
-        width: 85%;
+        width: 90%; /* Ajusta el ancho del contenedor */
+        margin: 0 auto; /* Centra horizontalmente */
     }
     #login{
         height: 200vh;
@@ -163,6 +177,9 @@ input:focus {
     }
     #reset{
         width: 75%;
+    }
+    input, button {
+        width: 100%; /* Ocupa todo el ancho disponible */
     }
     app-reset-password{
         width: 100%;
